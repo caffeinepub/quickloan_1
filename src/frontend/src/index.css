@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay-VariableFont_wght.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/Outfit-VariableFont_wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Forest green primary, warm gold accent */
+    --background: 0.98 0.005 100;
+    --foreground: 0.18 0.04 155;
+
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.04 155;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.04 155;
+
+    --primary: 0.34 0.1 155;
+    --primary-foreground: 1 0 0;
+
+    --secondary: 0.95 0.02 155;
+    --secondary-foreground: 0.34 0.1 155;
+
+    --muted: 0.95 0.01 100;
+    --muted-foreground: 0.52 0.04 155;
+
+    --accent: 0.76 0.14 82;
+    --accent-foreground: 0.18 0.04 155;
+
+    --destructive: 0.58 0.22 27;
+    --destructive-foreground: 1 0 0;
+
+    --success: 0.52 0.15 155;
+    --success-foreground: 1 0 0;
+
+    --border: 0.9 0.02 155;
+    --input: 0.9 0.02 155;
+    --ring: 0.34 0.1 155;
+
+    --radius: 0.5rem;
+
+    --chart-1: 0.34 0.1 155;
+    --chart-2: 0.76 0.14 82;
+    --chart-3: 0.52 0.22 27;
+    --chart-4: 0.62 0.12 220;
+    --chart-5: 0.48 0.18 300;
+
+    --sidebar: 0.96 0.01 155;
+    --sidebar-foreground: 0.18 0.04 155;
+    --sidebar-primary: 0.34 0.1 155;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.92 0.02 155;
+    --sidebar-accent-foreground: 0.34 0.1 155;
+    --sidebar-border: 0.88 0.02 155;
+    --sidebar-ring: 0.34 0.1 155;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .hero-bg {
+    background-image: url("/assets/generated/hero-bg.dim_1400x700.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .gold-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.76 0.14 82),
+      oklch(0.68 0.16 72)
+    );
+  }
+
+  .green-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.34 0.1 155),
+      oklch(0.28 0.09 160)
+    );
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
