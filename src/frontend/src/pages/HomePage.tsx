@@ -205,8 +205,93 @@ export function HomePage() {
         </div>
       </section>
 
+      {/* Photo banner - Real people, real results */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{ visible: { transition: { staggerChildren: 0.12 } } }}
+          >
+            <motion.div variants={fadeUp} className="text-center mb-12">
+              <span className="text-xs font-medium uppercase tracking-widest text-gold">
+                Real People, Real Results
+              </span>
+              <h2 className="font-display text-4xl md:text-5xl font-bold mt-3">
+                Helping You Move
+                <br />
+                <span className="text-forest">Forward in Life</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <motion.div
+                variants={fadeUp}
+                className="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300"
+              >
+                <img
+                  src="/assets/generated/feature-apply.dim_600x400.jpg"
+                  alt="Easy online application"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h3 className="font-display font-semibold text-white text-lg">
+                    Apply From Home
+                  </h3>
+                  <p className="text-white/80 text-sm mt-1">
+                    Simple online form, no branch visit needed.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={fadeUp}
+                className="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300"
+              >
+                <img
+                  src="/assets/generated/feature-approved.dim_600x400.jpg"
+                  alt="Fast approval"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h3 className="font-display font-semibold text-white text-lg">
+                    Fast Approval
+                  </h3>
+                  <p className="text-white/80 text-sm mt-1">
+                    Get your answer the same day you apply.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={fadeUp}
+                className="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300"
+              >
+                <img
+                  src="/assets/generated/feature-freedom.dim_600x400.jpg"
+                  alt="Financial freedom"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h3 className="font-display font-semibold text-white text-lg">
+                    Financial Freedom
+                  </h3>
+                  <p className="text-white/80 text-sm mt-1">
+                    Take control of your finances on your terms.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Features */}
-      <section className="py-24 bg-background" id="services">
+      <section className="py-24 bg-secondary" id="services">
         <div className="container">
           <motion.div
             initial="hidden"
@@ -253,7 +338,7 @@ export function HomePage() {
       </section>
 
       {/* How it works */}
-      <section className="py-24 bg-secondary" id="how-it-works">
+      <section className="py-24 bg-background" id="how-it-works">
         <div className="container">
           <motion.div
             initial="hidden"
@@ -317,7 +402,7 @@ export function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-background" id="testimonials">
+      <section className="py-24 bg-secondary" id="testimonials">
         <div className="container">
           <motion.div
             initial="hidden"
@@ -375,38 +460,65 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* CTA banner */}
-      <section className="py-20 green-gradient">
-        <div className="container text-center">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-          >
-            <motion.h2
-              variants={fadeUp}
-              className="font-display text-4xl md:text-5xl font-bold text-white mb-4"
+      {/* Photo + CTA split */}
+      <section className="relative overflow-hidden">
+        <div className="grid md:grid-cols-2">
+          <div className="relative h-64 md:h-auto">
+            <img
+              src="/assets/generated/hero-people.dim_1200x600.jpg"
+              alt="Happy QuickLoan customers"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-forest/30" />
+          </div>
+          <div className="green-gradient flex flex-col justify-center px-10 py-16 text-white">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
             >
-              Ready to Get Started?
-            </motion.h2>
-            <motion.p
-              variants={fadeUp}
-              className="text-white/70 mb-8 max-w-md mx-auto"
-            >
-              Apply in minutes. Receive a decision today.
-            </motion.p>
-            <motion.div variants={fadeUp}>
-              <Link to="/apply" data-ocid="cta.primary_button">
-                <Button
-                  size="lg"
-                  className="gold-gradient text-foreground font-semibold border-0 hover:opacity-90 shadow-lg"
+              <motion.h2
+                variants={fadeUp}
+                className="font-display text-3xl md:text-4xl font-bold mb-4"
+              >
+                Ready to Get Started?
+              </motion.h2>
+              <motion.p
+                variants={fadeUp}
+                className="text-white/75 mb-8 leading-relaxed"
+              >
+                Join thousands of satisfied customers who got the funds they
+                needed — fast, fair, and hassle-free.
+              </motion.p>
+              <motion.div
+                variants={fadeUp}
+                className="flex flex-col sm:flex-row gap-3"
+              >
+                <Link to="/apply" data-ocid="cta.primary_button">
+                  <Button
+                    size="lg"
+                    className="gold-gradient text-foreground font-semibold border-0 hover:opacity-90 shadow-lg"
+                  >
+                    Apply for a Loan <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </Link>
+                <a
+                  href="https://wa.me/12028169872"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Apply for a Loan <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </Link>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white/40 text-white hover:bg-white/10 hover:text-white w-full sm:w-auto"
+                  >
+                    Chat on WhatsApp
+                  </Button>
+                </a>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </main>
