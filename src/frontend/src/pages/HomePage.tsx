@@ -5,6 +5,8 @@ import {
   ArrowRight,
   CheckCircle2,
   Clock,
+  Mail,
+  MessageCircle,
   Shield,
   Star,
   TrendingUp,
@@ -47,8 +49,8 @@ const FEATURES = [
 const STEPS = [
   {
     num: "01",
-    title: "Apply Online",
-    desc: "Fill in our simple form — takes under 3 minutes.",
+    title: "Contact Us",
+    desc: "Reach out via WhatsApp or email with your loan request.",
   },
   {
     num: "02",
@@ -387,15 +389,46 @@ export function HomePage() {
               ))}
             </div>
 
-            <motion.div variants={fadeUp} className="text-center mt-12">
-              <Link to="/apply" data-ocid="howto.cta.button">
-                <Button
-                  size="lg"
-                  className="green-gradient text-white border-0 hover:opacity-90"
+            {/* Contact Us CTA */}
+            <motion.div
+              variants={fadeUp}
+              className="mt-14 flex flex-col items-center gap-4"
+            >
+              <p className="text-muted-foreground text-sm">
+                Ready to get started? Contact us now:
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://wa.me/12028169872"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-ocid="howto.whatsapp.button"
                 >
-                  Start Your Application <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </Link>
+                  <Button
+                    size="lg"
+                    className="green-gradient text-white border-0 hover:opacity-90 gap-2"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    WhatsApp Us
+                  </Button>
+                </a>
+                <a
+                  href="mailto:lendingloanus@outlook.com"
+                  data-ocid="howto.email.button"
+                >
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-forest/30 text-forest hover:bg-forest/5 gap-2"
+                  >
+                    <Mail className="w-5 h-5" />
+                    Email Us
+                  </Button>
+                </a>
+              </div>
+              <p className="text-xs text-muted-foreground">
+                lendingloanus@outlook.com &nbsp;&bull;&nbsp; +1 (202) 816-9872
+              </p>
             </motion.div>
           </motion.div>
         </div>

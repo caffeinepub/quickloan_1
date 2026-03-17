@@ -47,10 +47,10 @@ export function Footer() {
                   <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
                 <a
-                  href="mailto:lendingloans@outlook.com"
+                  href="mailto:lendingloanus@outlook.com"
                   className="hover:text-white transition-colors"
                 >
-                  lendingloans@outlook.com
+                  lendingloanus@outlook.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
